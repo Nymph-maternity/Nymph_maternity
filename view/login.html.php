@@ -1,3 +1,4 @@
+<? require('./controls/login.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +14,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
     <div class="container-fluid">
-      <a class="navbar-brand text-white" href="#"> THE MATERNITY SOLUTION and i changed it</a>
+      <a class="navbar-brand text-white" href="#"> THE MATERNITY SOLUTION</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,13 +35,13 @@
       <div class="col-md-6 col-offset-3">
         <h1> MATERNITY </h1>
         <div class="alert alert-danger" role="alert">
-
+          <? echo $message; ?>
         </div>
-        <form action="#" method="post">
+        <form action="../controls/login.php" method="post">
           <input type="email" placeholder="email" name="email" class="form-control"> <br>
           <input type="password" placeholder="password" name="password" class="form-control"><br>
           <input type="submit" name="submit" value="login" class="btn btn-primary"> <br><br>
-          <input type="button" onclick="window.location = '<?php echo $loginUrl ?>';" value="login with google" class="btn btn-danger">
+          <input type="button" onclick="" value="login with google" class="btn btn-danger">
         </form>
 
       </div>

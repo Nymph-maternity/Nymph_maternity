@@ -1,4 +1,3 @@
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,9 +22,6 @@
             <a class="nav-link active text-white" aria-current="page" href="index.html.php">HOME</a>
           </li>
           <li class="nav-item text-white">
-            <a class="nav-link active text-white" href="register.html.php">REGISTER</a>
-          </li>
-          <li class="nav-item text-white">
             <a class="nav-link active text-white" href="#">ABOUT</a>
           </li>
           <li class="nav-item text-white">
@@ -35,7 +31,7 @@
             <a class="nav-link active text-white" href="profile.html.php">PROFILE</a>
           </li>
           <li class="nav-item text-white">
-            <a class="nav-link active text-white" href="../script/logout.php">LOG OUT</a>
+            <a class="nav-link active text-white" href="">LOG OUT</a>
           </li>
         </ul>
       </div>
@@ -45,13 +41,14 @@
     <div class="row justify-content-center">
       <div class="jumbotron">
         <h1 class="display-4"> Nymph Maternity user dashboard</h1>
-        <p class="lead">for our mothers and mothers to be.</p>
+        <p class="lead">for our mothers and mothers to be. <a class="" href="details.html.php" role="button">Complete your registration</a> </p>
         <p class="lead">
           <a class="btn btn-primary btn-lg" href="#" role="button">Mentors</a>
           <a class="btn btn-primary btn-lg" href="#" role="button">Excercise</a>
-          <a class="btn btn-primary btn-lg" href="#" role="button">call line</a>
           <a class="btn btn-primary btn-lg" href="#" role="button">chat</a>
           <a class="btn btn-primary btn-lg" href="#" role="button">quotes</a>
+          <a class="btn btn-danger btn-lg" href="#" role="button">call line</a> </br></br>
+
         </p>
       </div>
     </div>

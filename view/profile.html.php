@@ -28,7 +28,7 @@
                         <a class="nav-link active text-white" href="#">NEWS</a>
                     </li>
                     <li class="nav-item text-white">
-                        <a class="nav-link active text-white" href="../script/logout.php">LOG OUT</a>
+                        <a class="nav-link active text-white" href="">LOG OUT</a>
                     </li>
                 </ul>
             </div>
@@ -51,6 +51,7 @@
                     <tbody>
                         <tr>
                             <td>demo </td>
+                            <td>demo</td>
                             <td>demo</td>
                             <td>demo</td>
                         </tr>

@@ -28,7 +28,7 @@
             <a class="nav-link active text-white" href="#">NEWS</a>
           </li>
           <li class="nav-item text-white">
-            <a class="nav-link active text-white" href="../script/logout.php">LOG OUT</a>
+            <a class="nav-link active text-white" href=" ">LOG OUT</a>
           </li>
 
         </ul>
@@ -38,7 +38,7 @@
   <div class="container" style="margin-top: 100px; width: 750px;">
     <div class="row justify-content-center">
       <div class="col-md-6 col-offset-3">
-        <h1> WELCOME <?= $_SESSION['name']; ?></h1>
+        <h1> WELCOME </h1>
         <p><b>We are almost there</b></p>
         <form>
           <label for="1">Are you pregnant:</label>

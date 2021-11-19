@@ -1,3 +1,4 @@
+<? require("../controls/register.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,17 +37,17 @@
       <div class="col-md-6 col-offset-3">
         <h1> MATERNITY </h1>
         <div class="alert alert-danger" role="alert">
-
+          <? echo $message; ?>
         </div>
-        <form action="" method="post">
+        <form action="../controls/register.php" method="post">
           <input type="text" placeholder="username" name="username" class="form-control"> <br>
           <input type="email" placeholder="email" name="email" class="form-control"> <br>
           <input type="password" placeholder="password" name="password" class="form-control"><br>
-          <input type="password" placeholder="repeat password" name="passwordrpt" class="form-control"><br>
+          <input type="password" placeholder="repeatpassword" name="repeat" class="form-control"><br>
           <input type="submit" name="submit" value="register" class="btn btn-primary"> <br>
           <p> Already have an account?</P>
           <a class="btn btn-primary btn-lg" href="login.html.php" role="button">login</a>
-          <input type="button" onclick="window.location = '<?php echo $loginUrl ?>';" value="login with google" class="btn btn-danger">
+          <input type="button" onclick=" " value="login with google" class="btn btn-danger">
         </form>
 
       </div>

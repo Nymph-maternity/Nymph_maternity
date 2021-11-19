@@ -28,7 +28,7 @@
             <a class="nav-link active text-white" href="#">NEWS</a>
           </li>
           <li class="nav-item text-white">
-            <a class="nav-link active text-white" href="../script/logout.php">LOG OUT</a>
+            <a class="nav-link active text-white" href="">LOG OUT</a>
           </li>
 
         </ul>
@@ -38,7 +38,7 @@
   <div class="container" style="margin-top: 80px; width: 750px;">
     <div class="row justify-content-center">
       <div class="col-md-6 col-offset-3">
-        <h1> WELCOME <?= $_SESSION['name']; ?></h1>
+        <h1> WELCOME</h1>
         <p><b>Complete your details to finish registration</b></p>
         <form>
           <input type="text" placeholder="age" name="age" class="form-control"> <br>
@@ -50,6 +50,7 @@
           <input type="country" placeholder="country" name="passwordrpt" class="form-control"><br>
           <input type="state" placeholder="state" name="passwordrpt" class="form-control"><br>
           <a class="btn btn-primary btn-lg" href="details2.html.php" role="button">Next</a>
+          <a class="btn btn-primary btn-lg" href="dashboard.html.php" role="button">Back</a>
 
         </form>
 
