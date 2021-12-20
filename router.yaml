@@ -1,0 +1,3 @@
+home_route:
+  path: /nymphmaternity/
+  defaults: { controller: "App\\Class\\Controller@home" }
