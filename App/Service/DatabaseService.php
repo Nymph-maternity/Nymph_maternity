@@ -1,9 +1,13 @@
 <?php
 
-class database
+namespace App\Service;
+
+use PDO;
+
+class DatabaseService
 {
 
-    public function connectDatabase()
+    public static function connectDatabase()
     {
         $username = "root";
         $password = "";

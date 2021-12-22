@@ -41,7 +41,7 @@
     <div class="row justify-content-center">
       <div class="jumbotron">
         <h1 class="display-4"> Nymph Maternity user dashboard</h1>
-        <p class="lead">for our mothers and mothers to be. <a class="" href="details.html.php" role="button">Complete your registration</a> </p>
+        <p class="lead">for our mothers and mothers to be. <a class="" href="/nymphmaternity/details" role="button">Complete your registration</a> </p>
         <p class="lead">
           <a class="btn btn-primary btn-lg" href="#" role="button">Mentors</a>
           <a class="btn btn-primary btn-lg" href="#" role="button">Excercise</a>

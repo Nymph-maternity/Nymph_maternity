@@ -1,7 +1,13 @@
 <?php
-require "database.php";
 
-class register extends database
+namespace App\service;
+
+use App\Service\DatabaseService;
+
+
+
+class AuthService
+
 {
     public $username;
     public $email;
@@ -29,8 +35,7 @@ class register extends database
     }
     public function userExist($username, $email)
     {
-        $poo = new database();
-        $pdo = $poo->connectDatabase();
+        $pdo = DatabaseService::connectDatabase();
         $query = "SELECT * FROM `register` WHERE username=:username OR email=:email";
         $stmt = $pdo->prepare($query);
         $stmt->bindparam(":username", $username);
@@ -49,8 +54,7 @@ class register extends database
     {
 
         $passcode = password_hash($password, PASSWORD_DEFAULT);
-        $poo = new database();
-        $pdo = $poo->connectDatabase();
+        $pdo =  DatabaseService::connectDatabase();
         $query = "INSERT INTO  `register` SET username=:username, email=:email, password=:password";
         $stmt = $pdo->prepare($query);
         $stmt->bindparam(":username", $username);
@@ -61,5 +65,35 @@ class register extends database
         } else {
             print_r($stmt->errorInfo());
         }
+    }
+    public function loginUser($password, $email)
+    {
+        $pdo = DatabaseService::connectDatabase();
+        $query = "SELECT `password` FROM `register` WHERE email = :email";
+        $stmt =  $pdo->prepare($query);
+        $stmt->bindparam(":email", $email);
+        $stmt->execute();
+        $pass = $stmt->fetch();
+        $hash = $pass['password'];
+        if (password_verify($password, $hash)) {
+            echo 'Password is valid!';
+            header('Location: /nymphmaternity/dashboard');
+        } else {
+            echo 'Invalid password.';
+        }
+    }
+    public function getDetails($email)
+    {
+        $pdo = DatabaseService::connectDatabase();
+        $query = "SELECT * FROM `register` WHERE  email=:email";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindparam(":email", $email);
+        $stmt->execute();
+        $reslt = $stmt->fetchAll();
+        return $reslt;
+    }
+    public function completeDetails()
+    {
+        $pdo = DatabaseService::connectDatabase();
     }
 }

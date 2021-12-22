@@ -1,3 +1,37 @@
 home_route:
-  path: /nymphmaternity/
-  defaults: { controller: "App\\Class\\Controller@home" }
+  path: /home
+  defaults: { controller: "App\\Controllers\\PagesController@home" }
+
+register_route:
+  path: /register
+  defaults: { controller: "App\\Controllers\\Auth\\RegisterController@register"}
+
+doRegister_route:
+  path: /registration
+  defaults: { controller: "App\\Controllers\\Auth\\RegisterController@doRegister"}
+  methods: POST
+
+login_route:
+  path: /login
+  defaults: { controller: "App\\Controllers\\Auth\\LoginController@login"}
+
+loginUser_route:
+  path: /loginUser
+  defaults: { controller: "App\\Controllers\\Auth\\LoginController@doLogin"}
+  methods: POST
+
+details_route:
+  path: /details
+  defaults: { controller: "App\\Controllers\\Auth\\DetailsController@details"}
+
+details2_route:
+  path: /details2
+  defaults: { controller: "App\\Controllers\\Auth\\DetailsController@details2"}
+
+profile_route:
+  path: /profile
+  defaults: { controller: "App\\Controllers\\AuthController@profile"}
+
+dashboard_route:
+  path: /dashboard
+  defaults: { controller: "App\\Controllers\\Auth\\LoginController@dashboard"}

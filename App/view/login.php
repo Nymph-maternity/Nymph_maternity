@@ -37,7 +37,7 @@
         <div class="alert alert-danger" role="alert">
           <? echo $message; ?>
         </div>
-        <form action="./Apps/controls/login" method="post">
+        <form action="./loginUser" method="post">
           <input type="email" placeholder="email" name="email" class="form-control"> <br>
           <input type="password" placeholder="password" name="password" class="form-control"><br>
           <input type="submit" name="submit" value="login" class="btn btn-primary"> <br><br>

@@ -70,7 +70,7 @@
           </select></br></br>
           <a href="3" role="button">Terms and conditions</a></br>
           <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy</br></br>
-          <a class="btn btn-primary btn-lg" href="details.html.php" role="button">Back</a>
+          <a class="btn btn-primary btn-lg" href="/nymphmaternity/details" role="button">Back</a>
           <input type="submit" name="submit" value="submit" class="btn btn-primary">
 
         </form>

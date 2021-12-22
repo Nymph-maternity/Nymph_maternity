@@ -39,7 +39,7 @@
         <div class="alert alert-danger" role="alert">
           <? echo $message; ?>
         </div>
-        <form action="../controls/register.php" method="post">
+        <form action="/nymphmaternity/registration" method="post">
           <input type="text" placeholder="username" name="username" class="form-control"> <br>
           <input type="email" placeholder="email" name="email" class="form-control"> <br>
           <input type="password" placeholder="password" name="password" class="form-control"><br>
