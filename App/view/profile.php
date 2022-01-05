@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="/nymphmaternity">HOME</a>
+                        <a class="nav-link active text-white" aria-current="page" href="./home">HOME</a>
                     </li>
                     <li class="nav-item text-white">
                         <a class="nav-link active text-white" href="#">ABOUT</a>

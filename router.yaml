@@ -20,6 +20,10 @@ loginUser_route:
   defaults: { controller: "App\\Controllers\\Auth\\LoginController@doLogin"}
   methods: POST
 
+logOut_route:
+  path: /logOut
+  defaults: {controller: "App\\Controllers\\Auth\\LoginController@doLogout"}
+  
 details_route:
   path: /details
   defaults: { controller: "App\\Controllers\\Auth\\DetailsController@details"}
@@ -28,9 +32,14 @@ details2_route:
   path: /details2
   defaults: { controller: "App\\Controllers\\Auth\\DetailsController@details2"}
 
+detailsUpdate_route:
+  path: /detailsUpdate
+  defaults: {controller: "App\\Controllers\\Auth\\DetailsController@doDetails"}
+  methods: POST
+
 profile_route:
   path: /profile
-  defaults: { controller: "App\\Controllers\\AuthController@profile"}
+  defaults: { controller: "App\\Controllers\\Auth\\LoginController@profile"}
 
 dashboard_route:
   path: /dashboard

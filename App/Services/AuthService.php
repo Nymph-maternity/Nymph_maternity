@@ -1,8 +1,8 @@
 <?php
 
-namespace App\service;
+namespace App\services;
 
-use App\Service\DatabaseService;
+use App\Services\DatabaseService;
 
 
 
@@ -40,7 +40,7 @@ class AuthService
         $stmt = $pdo->prepare($query);
         $stmt->bindparam(":username", $username);
         $stmt->bindparam(":email", $email);
-        $stmt->execute();
+        $stmt->bindparam(":blood", $blood);
         $reslt = $stmt->fetch();
         if (empty($reslt)) {
             $result = true;
@@ -76,8 +76,7 @@ class AuthService
         $pass = $stmt->fetch();
         $hash = $pass['password'];
         if (password_verify($password, $hash)) {
-            echo 'Password is valid!';
-            header('Location: /nymphmaternity/dashboard');
+            header('Location: ./dashboard');
         } else {
             echo 'Invalid password.';
         }
@@ -92,8 +91,48 @@ class AuthService
         $reslt = $stmt->fetchAll();
         return $reslt;
     }
-    public function completeDetails()
+    public function completeDetails($email, $firstname, $lastname, $age, $country, $state, $city, $blood, $genotype, $weight, $illness, $disability, $diabetes, $phone, $pregnancy, $firstPregnant)
     {
         $pdo = DatabaseService::connectDatabase();
+        $query = "INSERT INTO `register` WHERE  email=:email SET
+         firstname=:firstname, 
+         lastname=:lastname, 
+         age = :age,
+         country=:country, 
+         state=:state,
+         city=:city, 
+         blood=:blood
+         genotype = :genotype
+         weight = :weight
+         illness = :illness
+         disability = :disability
+         diabetes = :diabetes
+         phone = :phone
+         pregnanvy = :pregnancy
+         firstPregnant = :firstPregnant";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindparam(":email", $email);
+        $stmt->bindparam(":firstname", $firstname);
+        $stmt->bindparam(":lastnwme", $lastname);
+        $stmt->bindparam(":age", $age);
+        $stmt->bindparam(":country", $country);
+        $stmt->bindparam(":state", $state);
+        $stmt->bindparam(":city", $city);
+        $stmt->bindparam(":genotype", $genotype);
+        $stmt->bindparam(":weight", $weight);
+        $stmt->bindparam(":illness", $illness);
+        $stmt->bindparam(":disability", $disability);
+        $stmt->bindparam(":diabetes", $diabetes);
+        $stmt->bindparam(":phone", $phone);
+        $stmt->bindparam(":pregnancy", $pregnancy);
+        $stmt->bindparam(":firstpregnant", $firstPregnant);
+        $stmt->bindparam(":blood", $blood);
+        $stmt->execute();
+        if ($stmt->execute()) {
+            $result = true;
+        } else {
+            $result = false;
+        }
+        return $result;
     }
 }

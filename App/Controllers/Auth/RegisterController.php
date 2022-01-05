@@ -2,7 +2,8 @@
 
 namespace App\Controllers\Auth;
 
-use  App\service\AuthService;
+use  App\Services\AuthService;
+use Symfony\Component\HttpFoundation\Request;
 
 class RegisterController
 {
@@ -13,10 +14,11 @@ class RegisterController
     }
     public function doRegister()
     {
-        $username = $_POST["username"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        $repeatpassword = $_POST["repeat"];
+        $context = request::createFromGlobals();
+        $username = $context->request->get('username');
+        $email = $context->request->get('email');
+        $password = $context->request->get('password');
+        $repeatpassword = $context->request->get('repeat');
         $register = new AuthService;
         if ($register->emptydetails($username, $email, $password, $repeatpassword) == true) {
             $message = "you cannot leave any field empty";
@@ -28,7 +30,7 @@ class RegisterController
                     echo "user already exists";
                 } else {
                     $register->createUser($username, $email, $password);
-                    header("location: /nymphmaternity/login");
+                    header("location: ./login");
                 }
             }
         }

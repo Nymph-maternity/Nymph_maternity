@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="/">HOME</a>
+            <a class="nav-link active text-white" aria-current="page" href="./home">HOME</a>
           </li>
           <li class="nav-item text-white">
             <a class="nav-link active text-white" href="#">ABOUT</a>
@@ -28,7 +28,7 @@
             <a class="nav-link active text-white" href="#">NEWS</a>
           </li>
           <li class="nav-item text-white">
-            <a class="nav-link active text-white" href=" ">LOG OUT</a>
+            <a class="nav-link active text-white" href="./logOUT">LOG OUT</a>
           </li>
 
         </ul>
@@ -40,37 +40,37 @@
       <div class="col-md-6 col-offset-3">
         <h1> WELCOME </h1>
         <p><b>We are almost there</b></p>
-        <form>
+        <form action="./detailsUpdate" method="post">
           <label for="1">Are you pregnant:</label>
-          <select name="choose" id="1">
+          <select name="pregnant" id="1">
             <option value="yes">yes</option>
             <option value="No">No</option>
             <option value="none">i dont know</option>
           </select></br></br>
           <label for="2"> Is this your first pregnancy :</label>
-          <select name="choose" id="2">
+          <select name="firstPregnant" id="2">
             <option value="yes">yes</option>
             <option value="No">No</option>
           </select></br></br>
           <label for="3">Have you started antenatal :</label>
-          <select name="choose" id="3">
+          <select name="antenatal" id="3">
             <option value="yes">yes</option>
             <option value="No">No</option>
           </select></br></br>
           <label for="4">Are you diabetic :</label>
-          <select name="choose" id="4">
+          <select name="diabetes" id="4">
             <option value="yes">yes</option>
             <option value="No">No</option>
             <option value="none">i dont know</option>
           </select></br></br>
           <label for="5">Any physical disability :</label>
-          <select name="choose" id="5">
+          <select name="disability" id="5">
             <option value="yes">yes</option>
             <option value="No">No</option>
           </select></br></br>
           <a href="3" role="button">Terms and conditions</a></br>
           <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy</br></br>
-          <a class="btn btn-primary btn-lg" href="/nymphmaternity/details" role="button">Back</a>
+          <a class="btn btn-primary btn-lg" href="./details" role="button">Back</a>
           <input type="submit" name="submit" value="submit" class="btn btn-primary">
 
         </form>

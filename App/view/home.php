@@ -12,7 +12,8 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+
+  <nav class=" navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand text-white" href="#"> NYMPH MATERNITY </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,16 +37,16 @@
   <div class="container" style="margin-top: 150px; width: 650px;">
     <div class="row justify-content-center">
       <div class="jumbotron">
-        <h1 class="display-4">Welcome to Nymph Maternity</h1>
+        <h1 class=" display-4 text-xl-left">Welcome to Nymph Maternity</h1>
         <p class="lead">Please log in our mothers and mothers to be.</p>
         <p class="lead">
-          <a class="btn btn-primary btn-lg" href="./login" role="button"> login here</a>
+          <a class="btn btn-primary btn-dark" href="./login" role="button"> login here</a>
         </p>
       </div>
     </div>
   </div>
 </body>
-<footer class="page-footer font-small mdb-color pt-4">
+<footer class="bg-light page-footer font-small mdb-color pt-4">
 
   <!-- Footer Links -->
   <div class="container text-center text-md-left">

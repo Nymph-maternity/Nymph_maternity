@@ -28,7 +28,7 @@
             <a class="nav-link active text-white" href="#">NEWS</a>
           </li>
           <li class="nav-item text-white">
-            <a class="nav-link active text-white" href="">LOG OUT</a>
+            <a class="nav-link active text-white" href="./logOut">LOG OUT</a>
           </li>
 
         </ul>
@@ -40,19 +40,20 @@
       <div class="col-md-6 col-offset-3">
         <h1> WELCOME</h1>
         <p><b>Complete your details to finish registration</b></p>
-        <form action="./detailsUpdate1" method="post">
+        <form action="./detailsUpdate" method="post">
           <input type="firstname" placeholder="firstname" name="firstname" class="form-control"> <br>
-          <input type="blood" placeholder="lastname" name="lastname" class="form-control"> <br>
+          <input type="email" placeholder="email" name="email" Value="email" class="form-control"> <br>
+          <input type="lastname" placeholder="lastname" name="lastname" class="form-control"> <br>
           <input type="text" placeholder="age" name="age" class="form-control"> <br>
-          <input type="blood" placeholder="blood group" name="blood" class="form-control"> <br>
+          <input type="blood" placeholder="blood group" name="blood group" class="form-control"> <br>
           <input type="genotype" placeholder="genotype" name="genotype" class="form-control"><br>
           <input type="weight" placeholder="weight" name="weight" class="form-control"><br>
-          <input type="illness" placeholder="undelyning illness" name="illness" class="form-control"><br>
-          <input type="phone" placeholder="phone number" name="phone" class="form-control"><br>
+          <input type="illness" placeholder="illness" name="illness" class="form-control"><br>
+          <input type="phone" placeholder="phone" name="phone" class="form-control"><br>
           <input type="country" placeholder="country" name="country" class="form-control"><br>
           <input type="state" placeholder="state" name="state" class="form-control"><br>
-          <a class="btn btn-primary btn-lg" href="/nymphmaternity/details2" role="button">Next</a>
-          <a class="btn btn-primary btn-lg" href="/nymphmaternity/dashboard" role="button">Back</a>
+          <a class="btn btn-primary btn-lg" href="./details2" role="button">Next</a>
+          <a class="btn btn-primary btn-lg" href="./dashboard" role="button">Back</a>
 
         </form>
 

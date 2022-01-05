@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="/">HOME</a>
+            <a class="nav-link active text-white" aria-current="page" href="/home">HOME</a>
           </li>
           <li class="nav-item text-white">
             <a class="nav-link active text-white" href="#">ABOUT</a>
@@ -28,10 +28,10 @@
             <a class="nav-link active text-white" href="#">NEWS</a>
           </li>
           <li class="nav-item text-white">
-            <a class="nav-link active text-white" href="/profile">PROFILE</a>
+            <a class="nav-link active text-white" href="/nymphmaternity/profile">PROFILE</a>
           </li>
           <li class="nav-item text-white">
-            <a class="nav-link active text-white" href="">LOG OUT</a>
+            <a class="nav-link active text-white" href="./logOut">LOG OUT</a>
           </li>
         </ul>
       </div>

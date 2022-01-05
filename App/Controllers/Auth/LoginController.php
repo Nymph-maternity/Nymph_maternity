@@ -2,7 +2,11 @@
 
 namespace App\Controllers\Auth;
 
-use App\service\AuthService;
+use App\Services\AuthService;
+use App\Services\SessionService;
+use Symfony\Component\HttpFoundation\Request;
+
+
 
 class LoginController
 {
@@ -12,26 +16,23 @@ class LoginController
     }
     public function doLogin()
     {
-        $login = new AuthService;
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
+        $context = Request::createFromGlobals();
+        $password = $context->request->get('password');
+        $email = $context->request->get('email');
+        $login = new AuthService();
         if ($login->loginUser($password, $email)) {
-            $_SESSION['email'] = $email;
-            $_SESSION['password'] = $password;
-            $_SESSION['logged_in'] = true;
+            $session = new SessionService();
+            $session->SessionStart();
         } else {
             $message = "No user with the provided email";
         }
     }
     public function doLogout()
     {
-        session_start();
-        unset($_SESSION['email']);
-        unset($_SESSION['password']);
-        unset($_SESSION['logged_in']);
-        header("Location: ../view/index.html.php");
+        $session = new SessionService();
+        $session->SessionStop();
     }
+
     public function dashboard()
     {
         require_once("./App/view/dashboard.php");

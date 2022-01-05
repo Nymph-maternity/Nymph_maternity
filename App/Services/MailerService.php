@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Auth;
+namespace App\Services;
 
 require_once "../vendor/autoload.php";
 
@@ -8,15 +8,14 @@ require_once "../vendor/autoload.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use Symfony\Component\HttpFoundation\Request;
 
 class MailerController
 {
-    public function __construct()
+    public function mail()
     {
+
         try {
-            $context = Request::createFromGlobals();
-            $email = $context->request->get('email');
+            $email = $_POST["email"];
             $phpmailer = new PHPMailer();
             $phpmailer->isSMTP();
             $phpmailer->Host = 'smtp.mailtrap.io';
@@ -43,6 +42,7 @@ class MailerController
             }
         } catch (Exception $e) {
             echo "an error occured while trying to send mail \n ";
+            print_r($email->ErrorInfo);
         }
     }
 }

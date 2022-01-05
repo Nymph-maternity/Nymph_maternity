@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="/nymphmaternity">HOME</a>
+            <a class="nav-link active text-white" aria-current="page" href="./home">HOME</a>
           </li>
           <li class="nav-item text-white">
             <a class="nav-link active text-white" href="#">ABOUT</a>
@@ -39,7 +39,7 @@
         <div class="alert alert-danger" role="alert">
           <? echo $message; ?>
         </div>
-        <form action="/nymphmaternity/registration" method="post">
+        <form action="./registration" method="post">
           <input type="text" placeholder="username" name="username" class="form-control"> <br>
           <input type="email" placeholder="email" name="email" class="form-control"> <br>
           <input type="password" placeholder="password" name="password" class="form-control"><br>
