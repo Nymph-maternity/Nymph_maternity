@@ -11,10 +11,10 @@ class SessionService
     public function SessionStart()
     {
         $context = Request::createFromGlobals();
+        $context->request->start();
     }
     public function SessionStop()
     {
-        $session = new Session();
         $session->clear();
         header("location: ./home");
     }
