@@ -18,4 +18,7 @@ class SessionService
         $session->clear();
         header("location: ./home");
     }
+    public function new()
+    {
+    }
 }
