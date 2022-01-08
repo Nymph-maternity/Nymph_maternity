@@ -2,23 +2,32 @@
 
 namespace App\Services;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 
 class SessionService
 {
-    public function SessionStart()
+
+    public static function StartSession()
     {
-        $context = Request::createFromGlobals();
-        $context->request->start();
+        $session = new Session();
+        $session->start();
     }
-    public function SessionStop()
+    public static function SetSessionDetails($email)
     {
+        $session = new Session();
+        $session->set('email', $email);
+        $session->migrate();
+    }
+    public static function GetSessionDetails()
+    {
+        $session = new Session();
+        $email = $session->get('email');
+        return $email;
+    }
+    public static function StopSession()
+    {
+        $session = new Session();
         $session->clear();
-        header("location: ./home");
-    }
-    public function new()
-    {
     }
 }

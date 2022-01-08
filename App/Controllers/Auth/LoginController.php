@@ -20,17 +20,13 @@ class LoginController
         $password = $context->request->get('password');
         $email = $context->request->get('email');
         $login = new AuthService();
-        if ($login->loginUser($password, $email)) {
-            $session = new SessionService();
-            $session->SessionStart();
-        } else {
-            $message = "No user with the provided email";
-        }
+        $login->loginUser($password, $email);
+        SessionService::SetSessionDetails($email);
     }
     public function doLogout()
     {
         $session = new SessionService();
-        $session->SessionStop();
+        $session->StopSession();
     }
 
     public function dashboard()

@@ -4,6 +4,7 @@ namespace App\Controllers\Auth;
 
 use App\Services\AuthService;
 use Symfony\Component\HttpFoundation\Request;
+use App\Services\SessionService;
 
 class DetailsController
 {
@@ -13,9 +14,9 @@ class DetailsController
     }
     public function doDetails()
     {
-        $context = Request::createFromGlobals();
 
-        $email = $context->request->get('email');
+        $email2 = SessionService::GetSessionDetails();
+        $context = Request::createFromGlobals();
         $firstname = $context->request->get('firstname');
         $lastname = $context->request->get('lastname');
         $age = $context->request->get('age');
@@ -31,10 +32,9 @@ class DetailsController
         $diabetes = $context->request->get('diabetes');
         $pregnancy = $context->request->get('pregnancy');
         $firstPregnant = $context->request->get('firstPregnant');
-        echo $email;
         $details = new AuthService();
-        if ($details->completeDetails($email, $firstname, $lastname, $age, $country, $state, $city, $blood, $genotype, $weight, $illness, $disability, $diabetes, $phone, $pregnancy, $firstPregnant) == true) {
-            "<script> alert('Registration Complete')</script>";
+        if ($details->completeDetails($email2, $firstname, $lastname, $age, $country, $state, $city, $blood, $genotype, $weight, $illness, $disability, $diabetes, $phone, $pregnancy, $firstPregnant) == true) {
+            header('location: ./dashboard');
         }
     }
     public function details2()

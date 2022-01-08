@@ -1,17 +1,16 @@
 <?php
 require_once("./vendor/autoload.php");
 
-use Symfony\Component\HttpFoundation\Session\Session;
+
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Config\FileLocator;
+use App\Services\SessionService;
 
-$session = new Session();
-$session->start();
-
+$session = SessionService::StartSession();
 try {
     $locator = new FileLocator(__DIR__);
     $yamlLoader = new YamlFileLoader($locator);

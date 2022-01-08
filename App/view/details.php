@@ -42,7 +42,7 @@
         <p><b>Complete your details to finish registration</b></p>
         <form action="./detailsUpdate" method="post">
           <input type="firstname" placeholder="firstname" name="firstname" class="form-control"> <br>
-          <input type="email" placeholder="email" name="email" Value="email" class="form-control"> <br>
+          <input type="email" placeholder="email" name="email" Value=<?= $email2 ?> class="form-control"> <br>
           <input type="lastname" placeholder="lastname" name="lastname" class="form-control"> <br>
           <input type="text" placeholder="age" name="age" class="form-control"> <br>
           <input type="blood" placeholder="blood group" name="blood group" class="form-control"> <br>
